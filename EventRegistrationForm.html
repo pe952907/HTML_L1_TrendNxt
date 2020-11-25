@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Xena Events</title>
+
+        <style>
+            table{
+                margin-left:auto;
+                margin-right: auto;
+            }
+            .logo {
+                width: 100vw;
+                margin: 0 auto;
+            }
+            .btn {
+                background-color: midnightblue;
+                color: white;
+                font-weight: 700;
+                border: none;
+                width: 20%;
+                margin-left: 40%;
+                margin-right: 40%;
+                padding: 10px;
+                font-family: cursive;
+                margin-bottom: 1rem;
+            }
+            label {
+                display: block;
+                margin-bottom: .5rem;
+                font-family: cursive;
+                font-weight: 900;
+            }
+            .EventName{
+                font-weight: 100;
+                font-size: 3em;
+                font-family: cursive;
+            }
+            th{
+                text-align: right;
+                padding:5px;
+            }
+            input{
+                padding: 7px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="logo">
+            <table>
+            <tr>
+                <th><img src="BalloonLogo.png" height="100px" width="100px"></th>
+                <th><p class=EventName>Xena Events</p></th>
+                </tr>
+            </table>
+            
+        </div>
+
+        <div>
+            <form>
+                <table>
+                <tr>
+                    <th><label for="name">NAME </label></th>
+                    <th><input type="text" id="name" placeholder="Name" pattern="[A-Za-z]" required></th>
+                </tr>
+                <tr>
+                    <th><label for="age">AGE </label></th>
+                    <th><input type="number" id="age" placeholder="Age" min="18" required></th>
+                </tr>
+                <tr>
+                    <th><label for="email">EMAIL ID </label></th>
+                    <th><input type="email" id="email" placeholder="Email ID" required></th>
+                </tr>
+                <tr>
+                    <th><label for="city">CITY </label></th>
+                    <th><input type="text" id="city" placeholder="City" list="cities" required></th>
+                </tr>
+                </table>
+                
+                <datalist id="cities">
+                    <option value="Bangalore">
+                    <option value="Rajkot">
+                    <option value="Vijag">
+                </datalist>
+
+                <input type="submit" class="btn" value="SUBMIT">
+            </form>
+        </div>
+
+    </body>
+</html>

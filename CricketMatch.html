@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BCCI</title>
+
+        <style>
+            body {
+                text-align: center;
+                color:black;
+                font-family: cursive;
+            }
+            canvas {
+                border: 2px solid black;
+                border-radius: 10px;
+                padding: 20px;
+                background-color: gray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>BCCI</h1>
+        <h2>T20 Cricket Match Statistics</h2>
+
+        <canvas id="graph" width="500" height="410">Your browser does not support the HTML5 canvas tag.</canvas>
+
+        <script>
+            var graph = document.getElementById('graph');
+            var context = graph.getContext('2d');
+
+            context.font = '15px sans-serif';
+            context.lineWidth = 1;
+            context.shadowColor='#000000';
+
+            // Create a graph
+            context.beginPath();
+            context.moveTo(130,390);
+            context.lineTo(130,20);
+            context.moveTo(230,390);
+            context.lineTo(230,20);
+            context.moveTo(330,390);
+            context.lineTo(330,20);
+            context.moveTo(430,390);
+            context.lineTo(430,20);
+            context.moveTo(30,335);
+            context.lineTo(490,335);
+            context.moveTo(30,285);
+            context.lineTo(490,285);
+            context.moveTo(30,235);
+            context.lineTo(490,235);
+            context.moveTo(30,185);
+            context.lineTo(490,185);
+            context.moveTo(30,135);
+            context.lineTo(490,135);
+            context.moveTo(30,85);
+            context.lineTo(490,85);
+            context.moveTo(30,35);
+            context.lineTo(490,35);
+            context.strokeStyle = '#000000';
+            context.stroke();
+
+            context.beginPath();
+            context.moveTo(30,420);
+            context.lineTo(30,20);
+            context.moveTo(0,390);
+            context.lineTo(490,390);
+            context.strokeStyle = '#000000';
+            context.stroke();
+
+            // X-axis
+            context.strokeText('280',0,40);
+            context.strokeText('240',0,90);
+            context.strokeText('200',0,140);
+            context.strokeText('160',0,190);
+            context.strokeText('120',0,240);
+            context.strokeText('80',8,290);
+            context.strokeText('40',8,340);
+
+            // y-axis
+            context.strokeText('0',16,405);
+            context.strokeText('5',126,405);
+            context.strokeText('10',221,405);
+            context.strokeText('15',322,405);
+            context.strokeText('20',421,405);
+
+            // Labels
+            context.beginPath();
+            context.font = 'bold 11px Arial';
+            context.fillStyle = '#000000';
+            context.fillText('RUNS ^',50,10);
+            context.fillText('OVERS >',450,360);
+
+            // Plot the graph
+            context.beginPath();
+            context.strokeStyle = '#000000';
+            
+            // 5 - 40
+            context.arc(130,335,2,0,2*Math.PI); 
+            
+            // 10 - 75
+            context.arc(230,295,2,0,2*Math.PI); 
+            
+            // 15 - 140
+            context.arc(330,210,2,0,2*Math.PI); 
+            
+            context.stroke();
+        </script>
+
+    </body>
+</html>

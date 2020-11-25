@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video</title>
+        <style>
+            table{
+                margin-left:auto;
+                margin-right: auto;
+            }
+            h1 {
+                font-family: cursive;
+                color: blueviolet;
+                font-size: 4em;
+            }
+            .logo {
+                width: 100vw;
+                margin: 0 auto;
+            }
+            video {
+                display: block;
+                margin: 20px auto;
+                width: 100%;
+                max-width: 480px;
+            }
+            button {
+                background: darkblue;
+                color: white;
+                font-weight: 700;
+                padding: 15px;
+                margin: 0 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="logo">
+            <table>
+            <tr>
+                <th><img src="VideoLogo.jpg" height="200px" width="200px"></th>
+                <th><h1>Awesome Online Videos</h1></th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="video">
+            <video id="video" width="480" height="500">
+                <source src="Sample.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button style="margin-left: 42%" onclick="play()">Play Video</button>
+            <button style="margin-right: 42%" onclick="pause()">Pause Video</button>
+        </div>
+    </body>
+
+    <script>
+        var video = document.getElementById('video');
+        function play() {
+            video.play();
+        }
+
+        function pause() {
+            video.pause();
+        }
+    </script>
+</html>
